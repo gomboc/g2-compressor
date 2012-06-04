@@ -1,0 +1,36 @@
+
+# find php: pear first, command -v second, straight up php lastly
+if test "/usr/bin/php" != '@'php_bin'@'; then
+    PHP_BIN="/usr/bin/php"
+elif command -v php 1>/dev/null 2>/dev/null; then
+    PHP_BIN=`command -v php`
+else
+    PHP_BIN=php
+fi
+
+# find g2-compressor.php: pear first, same directory 2nd, 
+if test "/usr/share/php" != '@'php_dir'@'; then
+    PHP_DIR="/usr/share/php"
+else
+    SELF_LINK="$0"
+    SELF_LINK_TMP="$(readlink "$SELF_LINK")"
+    while test -n "$SELF_LINK_TMP"; do
+        SELF_LINK="$SELF_LINK_TMP"
+        SELF_LINK_TMP="$(readlink "$SELF_LINK")"
+    done
+    PHP_DIR="$(dirname "$SELF_LINK")"
+fi
+
+FILE="$PHP_DIR/g2-compressor.php"
+
+if test ! -f $FILE; then
+   	SELF_LINK="$0"
+    SELF_LINK_TMP="$(readlink "$SELF_LINK")"
+    while test -n "$SELF_LINK_TMP"; do
+        SELF_LINK="$SELF_LINK_TMP"
+        SELF_LINK_TMP="$(readlink "$SELF_LINK")"
+    done
+    FILE="$(dirname "$SELF_LINK")/g2-compressor.php"
+fi
+
+"$PHP_BIN" -d safe_mode=Off -f "$FILE" -- "$@"
