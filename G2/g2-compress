@@ -8,20 +8,12 @@ else
     PHP_BIN=php
 fi
 
-# find g2-compressor.php: pear first, same directory 2nd, 
+# find Compressor.php: pear first, same directory 2nd, 
 if test "/usr/share/php" != '@'php_dir'@'; then
     PHP_DIR="/usr/share/php"
-else
-    SELF_LINK="$0"
-    SELF_LINK_TMP="$(readlink "$SELF_LINK")"
-    while test -n "$SELF_LINK_TMP"; do
-        SELF_LINK="$SELF_LINK_TMP"
-        SELF_LINK_TMP="$(readlink "$SELF_LINK")"
-    done
-    PHP_DIR="$(dirname "$SELF_LINK")"
 fi
 
-FILE="$PHP_DIR/g2-compressor.php"
+FILE="$PHP_DIR/G2/Compressor.php"
 
 if test ! -f $FILE; then
    	SELF_LINK="$0"
@@ -30,7 +22,7 @@ if test ! -f $FILE; then
         SELF_LINK="$SELF_LINK_TMP"
         SELF_LINK_TMP="$(readlink "$SELF_LINK")"
     done
-    FILE="$(dirname "$SELF_LINK")/g2-compressor.php"
+    FILE="$(dirname "$SELF_LINK")/Compressor.php"
 fi
 
 "$PHP_BIN" -d safe_mode=Off -f "$FILE" -- "$@"

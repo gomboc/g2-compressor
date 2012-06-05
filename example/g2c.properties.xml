@@ -1,12 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <g2c>
 	<compress>
-		<name>cp</name>
+		<name>comp</name>
 		<type>js</type>
 		<destination>js/</destination>
 		<files>
 			<file>js/partials/test1.js</file>
             <file>js/partials/test2.js</file>
+			
+		</files>
+	</compress>
+	
+	<compress>
+		<name>comp</name>
+		<type>css</type>
+		<destination>css/</destination>
+		<files>
+			<file>css/partials/test1.css</file>
+            <file>css/partials/test2.css</file>
 			
 		</files>
 	</compress>
