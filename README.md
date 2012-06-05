@@ -49,7 +49,6 @@ Create g2c.properties.xml file in your project directory:
 			<destination>destination-directory</destination>
 			<files>
 				<file>source-file</file>
-	            				
 			</files>
 		</compress>	
 	</g2c>

@@ -22,7 +22,7 @@ if test ! -f $FILE; then
         SELF_LINK="$SELF_LINK_TMP"
         SELF_LINK_TMP="$(readlink "$SELF_LINK")"
     done
-    FILE="$(dirname "$SELF_LINK")/Compressor.php"
+    FILE="$(dirname "$SELF_LINK")/G2/Compressor.php"
 fi
 
 "$PHP_BIN" -d safe_mode=Off -f "$FILE" -- "$@"

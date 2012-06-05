@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package packagerversion="1.8.0" version="2.0" xmlns="http://pear.php.net/dtd/package-2.0" xmlns:tasks="http://pear.php.net/dtd/tasks-1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pear.php.net/dtd/tasks-1.0
+	http://pear.php.net/dtd/tasks-1.0.xsd
+	http://pear.php.net/dtd/package-2.0
+	http://pear.php.net/dtd/package-2.0.xsd">
+	<name>G2_Compressor</name>
+	<channel>gomboc.github.com/pear</channel>
+ 	<summary>G2 Compressor is YUI Compressor wrapper.</summary>
+ 	<description>G2 Compressor is YUI Compressor wrapper.</description>
+ 	<lead>
+	  	<name>Draško Gomboc</name>
+	  	<user>dg</user>
+	  	<email>drasko.gomboc@gmail.com</email>
+	  	<active>yes</active>
+ 	</lead>
+ 	<date>2012-06-05</date>
+	<version>
+		<release>1.0.0</release>
+		<api>1.0.0</api>
+ 	</version>
+ 	<stability>
+  		<release>stable</release>
+  		<api>stable</api>
+ 	</stability>
+ 	<license uri="http://www.opensource.org/licenses/mit-license.php">MIT</license>
+ 	<notes>-</notes>
+	<contents>
+   		<dir name="/">
+   			<dir name="G2">
+    			<dir name="Compressor">
+      				<file baseinstalldir="/" name="File.php" role="php">
+       					<tasks:replace from="@package_version@" to="version" type="package-info" />
+      				</file>
+     			</dir>
+     			<file baseinstalldir="/" name="Compressor.php" role="php">
+   					<tasks:replace from="@package_version@" to="version" type="package-info" />
+  				</file>
+     		</dir>
+    		<file baseinstalldir="/" name="README.md" role="doc"/>
+    		<file baseinstalldir="/" name="g2-compress" role="script"/>
+   		</dir>
+ 	</contents>
+ 	<dependencies>
+  		<required>
+   			<php>
+    			<min>5.0.0</min>
+   			</php>
+   			<pearinstaller>
+    			<min>1.4.0</min>
+   			</pearinstaller>
+		</required>
+ 	</dependencies>
+	<phprelease>
+		<filelist>
+	   		<install as="g2-compress" name="g2-compress" />
+	 	</filelist>
+	</phprelease>
+</package>
