@@ -69,11 +69,11 @@ Add to appropriate place in your project
 
 CSS
 	
-	$head->appendCss( 'file-name' );
+	G2_Compressor_Head::getInstance()->appendCss( 'file-name' );
 	
 JavaScript
 
-	$head->appendJavaScipt( 'file-name' );
+	G2_Compressor_Head::getInstance()->appendJavaScipt( 'file-name' );
 
 Development
 -----------
