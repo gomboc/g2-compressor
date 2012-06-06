@@ -1,6 +1,6 @@
 <?php 
 
-abstract class My_Head_Abstract
+abstract class G2_Compressor_Head_Abstract
 {
 	
 	protected $_layout;

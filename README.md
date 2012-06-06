@@ -1,7 +1,7 @@
 G2 Compressor
 =============
 
-G2 Compressor is YUI Compressor wrapper.
+G2 Compressor concats and compress js and css files.
 
 Contributors
 ------------
@@ -39,6 +39,8 @@ Remove package (run as `root`):
 Documentation
 -------------
 
+##Compress files
+
 Create g2c.properties.xml file in your project directory:
 
 	<?xml version="1.0" encoding="UTF-8"?>
@@ -56,6 +58,22 @@ Create g2c.properties.xml file in your project directory:
 Run the following command:
 
 	$ g2-compress
+	
+##Project
+
+Add to your Bootstrap file:
+
+	require_once 'G2/Compressor/Head.php';
+	
+Add to appropriate place in your project
+
+CSS
+	
+	$head->appendCss( 'file-name' );
+	
+JavaScript
+
+	$head->appendJavaScipt( 'file-name' );
 
 Development
 -----------
@@ -63,7 +81,7 @@ Development
 To run example:
 
 	$ cd example
-	$ ../G2/g2-compress
+	$ ../g2-compress
 	
 License
 -------

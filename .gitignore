@@ -1,6 +1,6 @@
 .settings*
 .buildpath
 .project
-example/css/comp*
-example/js/comp*
+example/public/css/comp*
+example/public/js/comp*
 G2_Compressor-*

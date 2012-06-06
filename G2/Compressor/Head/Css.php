@@ -1,6 +1,6 @@
 <?php 
 
-class My_Head_Css extends My_Head_Abstract
+class G2_Compressor_Head_Css extends G2_Compressor_Head_Abstract
 {	
 	
 	protected function _doAppend( $fileName )
