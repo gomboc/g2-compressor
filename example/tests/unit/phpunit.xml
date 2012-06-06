@@ -1,6 +1,6 @@
 <phpunit bootstrap="bootstrap.php" colors="true">
 
-	<testsuite name="G2 DataMapper Sample Application Test Suite">
+	<testsuite name="G2 Compressor Example Application Test Suite">
 		<directory>./application</directory>
 		<directory>./library</directory>
 	</testsuite>
