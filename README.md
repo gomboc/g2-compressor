@@ -65,6 +65,10 @@ Add to your Bootstrap file:
 
 	require_once 'G2/Compressor/Head.php';
 	
+To manually set path to properties file:
+
+	G2_Compressor_Head::getInstance()->setCompressorProperties( '<path-to-file>' );
+	
 Add to appropriate place in your project
 
 CSS

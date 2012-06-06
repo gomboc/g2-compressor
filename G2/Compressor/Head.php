@@ -65,6 +65,12 @@ class G2_Compressor_Head
 		
 		return $this;
 	} 
+	
+	
+	public function setCompressorProperties( $filePath )
+	{
+		$this->_compressorProperties = $filePath; 
+	}
 	    
 	
     private function _append( $name, $type )
