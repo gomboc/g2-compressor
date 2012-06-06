@@ -39,7 +39,7 @@ Remove package (run as `root`):
 Documentation
 -------------
 
-##Compress files
+#### Compress files
 
 Create g2c.properties.xml file in your project directory:
 
@@ -59,7 +59,7 @@ Run the following command:
 
 	$ g2-compress
 	
-##Project
+#### Project
 
 Add to your Bootstrap file:
 
