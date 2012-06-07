@@ -1,7 +1,7 @@
 G2 Compressor
 =============
 
-G2 Compressor concats and compress js and css files.
+Concat and compress js and css files.
 
 Contributors
 ------------
